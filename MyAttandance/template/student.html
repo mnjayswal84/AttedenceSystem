@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Student</title>
+    <link href="{%  static 'favicon.ico' %}" rel="shortcut icon">
+</head>
+<body>
+<h1>Student</h1>
+<form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div><label>Username</label>
+        <input type="text" name="username">
+    </div>
+    <div><label>Email</label>
+        <input type="email" name="email"></div>
+    <div><label>Password</label>
+        <input type="password" name="password1"></div>
+    <div><label>Confirm Password</label>
+        <input type="password" name="password2"></div>
+    <div><label>Image</label>
+        <input type="file" name="studentimage"></div>
+    <input name="submit" type="submit">
+</form>
+</body>
+</html>
